@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style id="dynamicStyles"></style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Welcome Page -->
+      <div id="welcomePage" class="page">
+        <h1>Welcome to Element Generator</h1>
+        <p>Select an element to generate:</p>
+        <div class="element-options">
+          <button id="headerButton">Header</button>
+          <button id="navbarButton">Navbar</button>
+          <button id="buttonButton">Button</button>
+          <button id="cardButton">Card</button>
+          <button id="formButton">Form</button>
+          <button id="footerButton">Footer</button>
+        </div>
+      </div>
+
+      <!-- Element Customization Page -->
+      <div id="elementPage" class="page hidden">
+        <button id="backButton" class="back-button">← Back</button>
+        <h2 id="elementTitle"></h2>
+        <div id="elementControls" class="form-container"></div>
+        <div class="output">
+          <h3>Generated Output:</h3>
+          <div id="elementOutput"></div>
+        </div>
+        <div class="code-output">
+          <h3>Generated Code:</h3>
+          <pre id="htmlCode"></pre>
+          <button onclick="copyCode('htmlCode')">Copy HTML</button>
+          <pre id="cssCode"></pre>
+          <button onclick="copyCode('cssCode')">Copy CSS</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
