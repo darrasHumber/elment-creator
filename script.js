@@ -1,3 +1,14 @@
+function copyCode(elementId) {
+  const codeElement = document.getElementById(elementId);
+  if (codeElement) {
+    navigator.clipboard
+      .writeText(codeElement.textContent)
+      .then(() => alert("Code copied to clipboard!"))
+      .catch(() => alert("Failed to copy code."));
+  } else {
+    console.error(`Element with ID "${elementId}" not found.`);
+  }
+}
 document.addEventListener("DOMContentLoaded", function () {
   let currentElement = null;
 
@@ -561,14 +572,5 @@ document.addEventListener("DOMContentLoaded", function () {
   function generateCode() {
     // This function is already implemented in each element's generation function.
     // No additional logic is needed here.
-  }
-
-  // Copy to Clipboard Function
-  function copyCode(elementId) {
-    const codeElement = document.getElementById(elementId);
-    navigator.clipboard
-      .writeText(codeElement.textContent)
-      .then(() => alert("Code copied to clipboard!"))
-      .catch(() => alert("Failed to copy code."));
   }
 });
