@@ -1,7 +1,6 @@
 /* General Styles */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   margin: 0;
   padding: 0;
@@ -17,7 +16,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   width: 90%;
-  max-width: 800px;
+  max-width: 1200px; /* Increased max-width for two columns */
   text-align: center;
 }
 
@@ -49,6 +48,7 @@ body {
   margin-right: 10px;
   font-size: 20px;
 }
+
 /* Card Container */
 .card-container {
   display: grid;
@@ -84,21 +84,12 @@ body {
   color: #666;
 }
 
-/* Alternating Card Colors */
 .card:nth-child(odd) {
-  background: linear-gradient(
-    135deg,
-    #c0fda1,
-    #c0e9fb
-  ); /* Light blue gradient */
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
 }
 
 .card:nth-child(even) {
-  background: linear-gradient(
-    135deg,
-    #fcff9a,
-    #fcd0c4
-  ); /* Light pink gradient */
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
 }
 
 /* Back Button */
@@ -116,6 +107,22 @@ body {
 
 .back-button:hover {
   background-color: #5a6268;
+}
+
+/* Two-Column Layout for Customization Page */
+.customization-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.form-column {
+  flex: 1;
+  max-width: 400px;
+}
+
+.output-column {
+  flex: 1;
 }
 
 /* Form Container */
@@ -163,7 +170,7 @@ body {
 
 /* Output Section */
 .output {
-  margin-top: 25px;
+  margin-top: 0;
   text-align: left;
 }
 
@@ -181,7 +188,7 @@ body {
 
 /* Code Output Section */
 .code-output {
-  margin-top: 25px;
+  margin-top: 20px;
   text-align: left;
 }
 
@@ -214,32 +221,4 @@ pre {
 
 .code-output button:hover {
   background-color: #218838;
-}
-
-/* Color Enhancements */
-h1 {
-  color: #2c3e50;
-}
-
-h2 {
-  color: #34495e;
-}
-
-h3 {
-  color: #2c3e50;
-}
-
-button {
-  background-color: #3498db;
-  color: white;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background-color: #2980b9;
-  transform: translateY(-2px);
-}
-
-button:active {
-  transform: translateY(0);
 }

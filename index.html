@@ -50,17 +50,26 @@
       <div id="elementPage" class="page hidden">
         <button id="backButton" class="back-button">← Back</button>
         <h2 id="elementTitle"></h2>
-        <div id="elementControls" class="form-container"></div>
-        <div class="output">
-          <h3>Generated Output:</h3>
-          <div id="elementOutput"></div>
-        </div>
-        <div class="code-output">
-          <h3>Generated Code:</h3>
-          <pre id="htmlCode"></pre>
-          <button onclick="copyCode('htmlCode')">Copy HTML</button>
-          <pre id="cssCode"></pre>
-          <button onclick="copyCode('cssCode')">Copy CSS</button>
+        <div class="customization-container">
+          <!-- Left Column: Form Controls -->
+          <div class="form-column">
+            <div id="elementControls" class="form-container"></div>
+          </div>
+
+          <!-- Right Column: Generated Output and Code -->
+          <div class="output-column">
+            <div class="output">
+              <h3>Generated Output:</h3>
+              <div id="elementOutput"></div>
+            </div>
+            <div class="code-output">
+              <h3>Generated Code:</h3>
+              <pre id="htmlCode"></pre>
+              <button onclick="copyCode('htmlCode')">Copy HTML</button>
+              <pre id="cssCode"></pre>
+              <button onclick="copyCode('cssCode')">Copy CSS</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
