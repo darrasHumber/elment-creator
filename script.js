@@ -9,25 +9,23 @@ function copyCode(elementId) {
     console.error(`Element with ID "${elementId}" not found.`);
   }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   let currentElement = null;
 
-  // Get buttons
-  const headerButton = document.getElementById("headerButton");
-  const navbarButton = document.getElementById("navbarButton");
-  const buttonButton = document.getElementById("buttonButton");
-  const cardButton = document.getElementById("cardButton");
-  const formButton = document.getElementById("formButton");
-  const footerButton = document.getElementById("footerButton");
+  // Get all cards and the back button
+  const cards = document.querySelectorAll(".card");
   const backButton = document.getElementById("backButton");
 
-  // Attach event listeners
-  headerButton.addEventListener("click", () => showElementPage("header"));
-  navbarButton.addEventListener("click", () => showElementPage("navbar"));
-  buttonButton.addEventListener("click", () => showElementPage("button"));
-  cardButton.addEventListener("click", () => showElementPage("card"));
-  formButton.addEventListener("click", () => showElementPage("form"));
-  footerButton.addEventListener("click", () => showElementPage("footer"));
+  // Attach event listeners to cards
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const element = card.getAttribute("data-element");
+      showElementPage(element);
+    });
+  });
+
+  // Attach event listener to back button
   backButton.addEventListener("click", showWelcomePage);
 
   // Show Welcome Page
